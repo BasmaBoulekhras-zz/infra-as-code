@@ -1,0 +1,12 @@
+imports:
+- path: templates/gke-cluster.jinja        
+  name: gke-cluster.jinja
+
+resources:                             
+- name: gke-cluster
+  type: gke-cluster.jinja        
+  properties:
+    description: "Example Cluster"
+    zones:
+    - us-central1-a
+    initialNodeCount: 2
