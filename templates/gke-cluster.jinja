@@ -13,8 +13,13 @@ resources:
         initialNodeCount: {{ properties['initialNodeCount'] | default(1) }}
         config:
           machineType: {{ properties['machineType'] | default('n1-standard-1') }}
+          labels: {{ properties['labels'] }}
           oauthScopes:
           - https://www.googleapis.com/auth/cloud-platform 
+        autoscaling:
+          enabled: true
+          minNodeCount: 1
+          maxNodeCount: 3
         management:
           autoUpgrade: true
           autoRepair: true
