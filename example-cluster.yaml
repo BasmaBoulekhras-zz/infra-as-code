@@ -9,4 +9,6 @@ resources:
     description: "Example Cluster"
     zones:
     - us-central1-a
+    labels:
+      env: gke-dev
     initialNodeCount: 2
